@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gamixter Banners</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#f7f1ea;--ink:#1a1614;--muted:#9a8778;--line:#f0e4d8;--ember:#e86a1a;--soft:#fff1e6;--bar:#f8f1e8}
+*{box-sizing:border-box}body{margin:0;font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select{font:inherit}button{cursor:pointer}
+.app{display:flex;min-height:100vh}.side{width:240px;background:#fff;border-right:1px solid var(--line);padding:18px 12px;flex:none}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700;padding:0 8px 14px}.mark{width:32px;height:32px;border-radius:8px;background:var(--ink);color:#fff;display:grid;place-items:center}
+.nav-label{color:var(--ember);font-weight:600;font-size:14px;padding:8px 12px}.nav-item{display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;font-size:14px}
+.nav-item.active{background:var(--soft);color:var(--ember);font-weight:600}.ver{color:var(--muted);font-size:12px;font-weight:600}
+.main{flex:1;min-width:0;padding:16px 28px 48px}.top{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.back{border:0;background:transparent;font-size:22px}h1{margin:0;font-size:20px}.sub{margin:2px 0 0;color:var(--muted);font-size:12px}
+.tools{margin-left:auto;display:flex;align-items:center;gap:6px}.lang{width:36px;height:36px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:12px;font-weight:700}
+.lang.on{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--line)}.save{border:0;border-radius:12px;background:var(--ember);color:#fff;min-height:40px;padding:0 16px;font-weight:700}
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);margin-bottom:18px;overflow:auto}.tabs button{border:0;border-bottom:2px solid transparent;background:transparent;min-height:44px;color:var(--muted);font-weight:650;white-space:nowrap}
+.tabs button.on{color:var(--ember);border-bottom-color:var(--ember)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px}
+label{display:block;font-size:14px;margin:10px 0 6px}label:first-child{margin-top:0}
+input,select{width:100%;min-height:44px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.hint{color:var(--muted);font-size:13px;line-height:1.45}.bar{background:var(--bar);border:1px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0;padding:6px 10px}
+.bar button{border:0;background:transparent;font-weight:700;margin-right:8px}.flush{border-radius:0 0 12px 12px}.count{text-align:right;color:var(--muted);font-size:12px}
+.section{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.switch-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0}
+.toggle{width:42px;height:24px;border:0;border-radius:999px;background:#e7ddd3;position:relative}.toggle.on{background:var(--ember)}
+.toggle i{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff}.toggle.on i{left:21px}
+.grid9{display:grid;grid-template-columns:repeat(3,36px);gap:6px}.grid9 button{width:36px;height:36px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.grid9 button.on{background:var(--ember);border-color:var(--ember)}
+.phone{border:8px solid #1b2430;border-radius:28px;min-height:520px;background:#eef1f6;padding:12px;position:relative}
+.banner{color:#fff;border-radius:16px;display:flex;align-items:center;gap:8px;padding:8px;position:relative;z-index:1}
+.gift{width:36px;height:36px;border-radius:10px;background:#5b4bdb;display:grid;place-items:center;flex:none}
+.get{margin-left:auto;border:0;border-radius:999px;padding:6px 12px;font-weight:700}
+.ghost{height:64px;border-radius:12px;background:#e4e7ee;margin-top:10px}
+.place{border:1px solid #f3c7a8;border-radius:16px;padding:14px;margin-bottom:12px;background:#fff}
+.badge{border-radius:999px;background:var(--soft);color:var(--ember);font-size:12px;font-weight:700;padding:2px 8px}
+.chip{border:1px solid var(--line);border-radius:999px;font-size:12px;padding:2px 8px}
+.ghost-btn{border:1px solid var(--line);background:#fff;border-radius:12px;min-height:40px;padding:0 12px;font-weight:650}
+.bonus{border:1px solid var(--line);border-radius:12px;padding:8px;margin-top:6px;text-align:left;background:#fff;width:100%}
+.bonus.on{border-color:var(--ember);background:var(--soft)}
+@media(max-width:980px){.side{display:none}.layout,.row4,.row3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="brand"><span class="mark">G</span> Gamixter</div>
+  <div class="nav-label">Games</div>
+  <div class="nav-item">Missions <span class="ver">V2</span></div>
+  <div class="nav-item active">Banners <span class="ver">V2</span></div>
+  <div class="nav-item">Shop <span class="ver">V2</span></div>
+</aside>
+<main class="main">
+  <div class="top">
+    <button class="back" type="button">‹</button>
+    <div><h1 id="title"></h1><p class="sub" id="subline"></p></div>
+    <div class="tools" id="langs"></div>
+    <button class="save" id="save" type="button">Save</button>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="layout">
+    <div id="form"></div>
+    <aside>
+      <div class="hint" id="previewLabel"></div>
+      <div class="phone" id="phone"></div>
+      <p class="hint" id="meta"></p>
+    </aside>
+  </div>
+</main>
+</div>
+<script>
+const TEMPLATES=["Floating button","Smart","Enhanced","Promotional","Interstitial"];
+const ACTIONS=["Open game","Give bonus","Redirect (same window)","Open URL (new tab)","Close banner","None"];
+const FREQ=["Every page match (no limit)","Once per session","Once per hour","Once per day","Once ever","Custom..."];
+const FONTS=["Roboto","Inter","Manrope","System"];
+const CELLS=["tl","tc","tr","ml","mc","mr","bl","bc","br"];
+const TRIGGERS=Array.from({length:10},(_,i)=>({id:String(i+1),name:"Trigger "+(i+1)}));
+const BONUSES=[
+  {id:"9232",code:"#1",name:"20 DOGE. Бонус за регистрацию (Колесо фортуны)"},
+  {id:"9254",code:"#8",name:"0,1 LTC. Бонус за регистрацию (Колесо фортуны)"},
+  {id:"9255",code:"#9",name:"1 TON. Бонус за регистрацию (Колесо фортуны)"},
+  {id:"9256",code:"#10",name:"25 POL. Бонус за регистрацию (Колесо фортуны)"}
+];
+const HINTS={
+  Smart:"One row: picture, heading with a supporting line, button at the side. Leave the supporting line empty for the minimal look.",
+  "Floating button":"A round button that stays on screen and opens the banner.",
+  Enhanced:"Smart row with a larger picture and extra emphasis on the button.",
+  Promotional:"Wider promo card with picture, copy, and a full call to action.",
+  Interstitial:"A blocking card over the page until the player acts or closes it."
+};
+const state={
+  tab:"general", lang:"en", langs:["en","fr"], name:"BanerV3_smart", template:"Smart",
+  showPicture:true, width:"", height:"", action:"Open game", trigger:"", url:"", redirectUrl:"",
+  bonusId:"", bonusQuery:"", bonusEvery:"Once a day", bonusThen:"Close banner", closeButton:false,
+  copy:{en:{title:"You Have a Prize",subtitle:"Take your bonus now",button:"Get",tb:false,ti:false,tu:false,sb:false,si:false,su:false},
+        fr:{title:"Vous avez un prix",subtitle:"Prenez votre bonus",button:"Obtenir",tb:false,ti:false,tu:false,sb:false,si:false,su:false}},
+  fill:"color", cardBg:"#1b1530", radius:"", borderColor:"#1b1530", borderWidth:"",
+  titleColor:"#ffffff", titleSize:"", titleFont:"Roboto", titleWeight:"",
+  subColor:"#d6d3d1", subSize:"", subFont:"Roboto", subWeight:"",
+  btnBg:"#22c55e", btnColor:"#ffffff", btnSize:"", btnFont:"Roboto", btnWeight:"", btnStroke:"", btnStrokeWidth:"",
+  theme:"gamixter_v3", anchor:"tc", offsetX:"0", offsetY:"0",
+  dimPage:false, dimOpacity:"20", pageInteractive:true, stackOrder:"", frequency:FREQ[0], customFrequency:"",
+  placements:[{id:"pl-52",name:"BanerV3_smart",status:"Published",triggerId:"52",shows:true}]
+};
+const $=id=>document.getElementById(id);
+function copy(){return state.copy[state.lang]}
+function field(label, inner){return `<label>${label}</label>${inner}`}
+function inp(key, attrs=""){return `<input data-k="${key}" value="${esc(state[key]??"")}" ${attrs}>`}
+function sel(key, options){return `<select data-k="${key}">${options.map(o=>`<option ${state[key]===o?"selected":""}>${o}</option>`).join("")}</select>`}
+function esc(s){return String(s).replace(/[&<>\"]/g,function(c){return {"&":"&","<":"<",">":">","\"":"""}[c]||c})}
+function toggle(key,label){return `<div class="switch-row"><span>${label}</span><button class="toggle ${state[key]?"on":""}" data-toggle="${key}" type="button"><i></i></button></div>`}
+function render(){
+  $("title").textContent=state.name||"Untitled";
+  $("subline").textContent="Banner · "+state.template;
+  $("langs").innerHTML=state.langs.map(c=>`<button class="lang ${c===state.lang?"on":""}" data-lang="${c}" type="button">${c.toUpperCase()}</button>`).join("")+`<button class="lang" id="addLang" type="button">+</button>`;
+  $("tabs").innerHTML=["general","style","position","behavior","placements"].map(t=>`<button class="${state.tab===t?"on":""}" data-tab="${t}" type="button">${t[0].toUpperCase()+t.slice(1)}</button>`).join("");
+  $("form").innerHTML=panels[state.tab]();
+  $("previewLabel").textContent=`Live preview — ${state.template} · ${state.lang}`;
+  const c=copy();
+  const dim=state.dimPage?`<div style="position:absolute;inset:0;background:#1a1614;opacity:${Math.min(100,Number(state.dimOpacity)||20)/100}"></div>`:"";
+  $("phone").innerHTML=dim+`<div class="banner" style="background:${state.cardBg};border-radius:${state.radius||16}px">
+    ${state.showPicture&&state.template!=="Floating button"?'<span class="gift">🎁</span>':""}
+    <span><strong style="color:${state.titleColor}">${esc(c.title)}</strong><br><span style="font-size:12px;color:${state.subColor}">${esc(c.subtitle)}</span></span>
+    <button class="get" style="background:${state.btnBg};color:${state.btnColor}" type="button">${esc(c.button||"Get")}</button></div><div class="ghost"></div><div class="ghost"></div>`;
+  $("meta").textContent=`${state.anchor} · x ${state.offsetX||0} · y ${state.offsetY||0} · ${state.frequency}${state.dimPage?" · dim "+(state.dimOpacity||20)+"%":""}`;
+  bind();
+}
+const panels={
+  general(){
+    const c=copy();
+    let extra="";
+    if(state.action==="Open game") extra=field("Game trigger",`<select data-k="trigger"><option value="">Pick a trigger...</option>${TRIGGERS.map(t=>`<option value="${t.id}" ${state.trigger===t.id?"selected":""}>${t.name} — ID: ${t.id}</option>`).join("")}</select><p class="hint">Which game opens is defined by the trigger.</p>`);
+    if(state.action==="Give bonus") extra=`<label>Bonus</label><input data-k="bonusQuery" placeholder="Search bonus" value="${esc(state.bonusQuery)}">${BONUSES.filter(b=>!state.bonusQuery||(b.code+b.name).toLowerCase().includes(state.bonusQuery.toLowerCase())).map(b=>`<button class="bonus ${state.bonusId===b.id?"on":""}" data-bonus="${b.id}" type="button">${b.code} ${esc(b.name)}</button>`).join("")}`+field("Frequency", sel("bonusEvery",["Once a day","Every time","Once ever"]))+field("Then", sel("bonusThen",["Close banner","None"]));
+    if(state.action==="Redirect (same window)") extra=field("URL", inp("redirectUrl",'placeholder="https://"'));
+    if(state.action==="Open URL (new tab)") extra=field("URL", inp("url",'placeholder="https://"'));
+    return `<div class="card"><div class="row2">${field("Banner name",inp("name"))}${field("Template",sel("template",TEMPLATES))}</div><p class="hint">${HINTS[state.template]}</p><p class="hint">First language is the fallback for unmatched user languages.</p></div>
+    <div class="card">${field("Title",`<div class="bar"><button data-mark="tb" type="button">B</button><button data-mark="ti" type="button">I</button><button data-mark="tu" type="button">U</button></div><input class="flush" data-copy="title" value="${esc(c.title)}" maxlength="200">`)}<div class="count">${c.title.length}/200</div>
+    ${field("Subtitle",`<div class="bar"><button data-mark="sb" type="button">B</button><button data-mark="si" type="button">I</button><button data-mark="su" type="button">U</button></div><input class="flush" data-copy="subtitle" value="${esc(c.subtitle)}" maxlength="300">`)}<div class="count">${c.subtitle.length}/300</div></div>
+    <div class="card"><div class="section">Picture</div>${toggle("showPicture","Show")}<div class="row2">${field("Width",inp("width"))}${field("Height",inp("height"))}</div><p class="hint">Shown inside the card. Leave the size empty to use the one from the layout.</p></div>
+    <div class="card"><div class="section">Button</div>${field("Text",`<input data-copy="button" value="${esc(c.button)}" maxlength="30">`)}<div class="count">${c.button.length}/30</div>${field("Action",sel("action",ACTIONS))}${extra}</div>
+    <div class="card"><div class="section">Layout</div>${toggle("closeButton","Close button (×)")}</div>`;
+  },
+  style(){
+    const type=(prefix,color,size,font,weight)=>`<div class="row4">${field("Color",inp(color))}${field("Font size",inp(size))}${field("Font",sel(font,FONTS))}${field("Weight",sel(weight,["","400","500","600","700"]))}</div>`;
+    return `<p class="hint">The look comes from the client theme. Everything here is an override — leave a field empty and the theme decides.</p>
+    <div class="card"><div class="section">Card</div><div class="row3">${field("Fill",sel("fill",["color","gradient"]))}${field("Background",inp("cardBg"))}${field("Radius",inp("radius"))}</div><div class="row2">${field("Border",inp("borderColor"))}${field("Border width",inp("borderWidth"))}</div></div>
+    <div class="card"><div class="section">Title</div>${type("title","titleColor","titleSize","titleFont","titleWeight")}</div>
+    <div class="card"><div class="section">Subtitle</div>${type("sub","subColor","subSize","subFont","subWeight")}</div>
+    <div class="card"><div class="section">Button</div><div class="row3">${field("Background",inp("btnBg"))}${field("Text color",inp("btnColor"))}${field("Font size",inp("btnSize"))}</div><div class="row2">${field("Font",sel("btnFont",FONTS))}${field("Weight",sel("btnWeight",["","400","500","600","700"]))}</div><div class="row2">${field("Text stroke",inp("btnStroke"))}${field("Stroke width",inp("btnStrokeWidth"))}</div><p class="hint">leave empty for no stroke</p></div>
+    <div class="card"><div class="section">Theme</div>${field("Theme",sel("theme",["gamixter_v3","default","dark"]))}</div>`;
+  },
+  position(){
+    return `<div class="card"><div class="section">Anchor</div><div class="grid9">${CELLS.map(c=>`<button class="${state.anchor===c?"on":""}" data-cell="${c}" type="button"></button>`).join("")}</div><div class="row2">${field("Offset X",inp("offsetX"))}${field("Offset Y",inp("offsetY"))}</div><p class="hint">On a phone held upright the banner sits at the top. Grid and offset apply on desktop.</p></div>`;
+  },
+  behavior(){
+    return `<p class="hint">Behavior is shared — changes apply to all languages.</p>
+    <div class="card"><div class="section">Page overlay</div>${toggle("dimPage","Dim the page (backdrop)")}
+    ${state.dimPage?`<label>Backdrop strength</label><div class="row2"><input data-k="dimOpacity" value="${esc(state.dimOpacity||20)}"><span class="hint">%</span></div>`:""}
+    ${toggle("pageInteractive","Page stays interactive")}<p class="hint">When several banners share one placement, only the first banner's overlay settings apply.</p></div>
+    <div class="card"><div class="section">Stacking</div>${field("Order",inp("stackOrder"))}<p class="hint">lower order shows higher in the stack</p></div>
+    <div class="card"><div class="section">Show frequency</div>${sel("frequency",FREQ)}${state.frequency==="Custom..."?field("Custom",inp("customFrequency",'placeholder="e.g. 3 / week"')):""}<p class="hint">Counted in the user's browser. Triggers and manual opens are never capped.</p></div>`;
+  },
+  placements(){
+    return `<div class="card"><p class="hint">Placements showing this banner. A placement can show several banners at once.</p><button class="save" id="addPlace" type="button">Add placement</button> <button class="ghost-btn" id="attach" type="button">Attach existing</button></div>
+    ${state.placements.map(p=>`<article class="place"><strong>${esc(p.name)}</strong> <span class="badge">${p.status}</span> <span class="chip">trigger ID: ${p.triggerId}</span>
+    <div class="switch-row"><span>${p.shows?"Shows this banner":"Hidden"}</span><button class="toggle ${p.shows?"on":""}" data-place="${p.id}" type="button"><i></i></button></div>
+    <button class="ghost-btn" data-detach="${p.id}" type="button">Detach</button></article>`).join("")}`;
+  }
+};
+function bind(){
+  document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{state.tab=b.dataset.tab;render()});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{state.lang=b.dataset.lang; if(!state.copy[state.lang]) state.copy[state.lang]={title:"",subtitle:"",button:"Get",tb:false,ti:false,tu:false,sb:false,si:false,su:false}; render()});
+  const add=$("addLang"); if(add) add.onclick=()=>{const pool=["en","fr","de","es","pt","it"]; const n=pool.find(c=>!state.langs.includes(c)); if(!n) return; state.langs.push(n); state.lang=n; state.copy[n]={title:"",subtitle:"",button:"Get",tb:false,ti:false,tu:false,sb:false,si:false,su:false}; render()};
+  document.querySelectorAll("[data-k]").forEach(el=>el.oninput=()=>{state[el.dataset.k]=el.value; if(["name","template","action","frequency","dimPage","cardBg","btnBg","btnColor","titleColor","subColor","dimOpacity"].includes(el.dataset.k)||el.tagName==="SELECT") render();});
+  document.querySelectorAll("[data-copy]").forEach(el=>el.oninput=()=>{copy()[el.dataset.copy]=el.value; render()});
+  document.querySelectorAll("[data-toggle]").forEach(b=>b.onclick=()=>{const k=b.dataset.toggle; state[k]=!state[k]; if(k==="dimPage"&&state[k]&&!state.dimOpacity) state.dimOpacity="20"; render()});
+  document.querySelectorAll("[data-mark]").forEach(b=>b.onclick=()=>{copy()[b.dataset.mark]=!copy()[b.dataset.mark]});
+  document.querySelectorAll("[data-cell]").forEach(b=>b.onclick=()=>{state.anchor=b.dataset.cell; render()});
+  document.querySelectorAll("[data-bonus]").forEach(b=>b.onclick=()=>{state.bonusId=b.dataset.bonus; render()});
+  const ap=$("addPlace"); if(ap) ap.onclick=()=>{state.placements.push({id:"pl-"+Date.now(),name:state.name+" placement",status:"Draft",triggerId:String(50+state.placements.length),shows:true}); render()};
+  const at=$("attach"); if(at) at.onclick=()=>{state.placements.push({id:"pl-lobby",name:"Lobby home",status:"Published",triggerId:"18",shows:true}); render()};
+  document.querySelectorAll("[data-place]").forEach(b=>b.onclick=()=>{const p=state.placements.find(x=>x.id===b.dataset.place); p.shows=!p.shows; render()});
+  document.querySelectorAll("[data-detach]").forEach(b=>b.onclick=()=>{state.placements=state.placements.filter(x=>x.id!==b.dataset.detach); render()});
+  $("save").onclick=()=>{ $("meta").textContent="Saved "+state.name; };
+}
+render();
+</script>
+</body>
+</html>
